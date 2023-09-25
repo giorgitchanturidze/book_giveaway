@@ -78,10 +78,6 @@ This project is licensed under the Apache-2.0 license - see the [LICENSE.md](LIC
 
 ## Contact
 
-Your Name - your.email@example.com - [Your GitHub Profile](https://github.com/your-username)
+Your Giorgi - chanturidzegiorgi31@gmail.com - [Your GitHub Profile](https://github.com/giorgitchanturidze)
 
-Project Link: [https://github.com/your-username/book-giveaway-service-api](https://github.com/your-username/book-giveaway-service-api)
-
-```
-
-Please replace `your-username`, `your.email@example.com`, and other placeholders with your actual GitHub username, email, and relevant details. Also, make sure to include any additional information such as project setup steps, environment variables, etc., that might be necessary for someone looking to run the project.
+Project Link: [https://github.com/giorgitchanturidze/book_giveaway](https://github.com/giorgitchanturidze/book_giveaway)
