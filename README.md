@@ -78,6 +78,12 @@ This project is licensed under the Apache-2.0 license - see the [LICENSE.md](LIC
 
 ## Contact
 
-Your Giorgi - chanturidzegiorgi31@gmail.com - [Your GitHub Profile](https://github.com/giorgitchanturidze)
+Name: **Giorgi**
 
-Project Link: [https://github.com/giorgitchanturidze/book_giveaway](https://github.com/giorgitchanturidze/book_giveaway)
+[Email](mailto:https:chanturidzegiorgi31@gmail.com)
+
+[GitHub Profile](https://github.com/giorgitchanturidze)
+
+[GitHub Profile](https://github.com/giorgitchanturidze)
+
+[Project Link](https://github.com/giorgitchanturidze/book_giveaway)
