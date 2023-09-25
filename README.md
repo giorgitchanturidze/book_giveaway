@@ -84,6 +84,6 @@ Name: **Giorgi**
 
 [GitHub Profile](https://github.com/giorgitchanturidze)
 
-[GitHub Profile](https://github.com/giorgitchanturidze)
+[Linkedin Profile](https://www.linkedin.com/in/giorgi-tchanturidze/)
 
 [Project Link](https://github.com/giorgitchanturidze/book_giveaway)
