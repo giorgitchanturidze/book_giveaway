@@ -10,9 +10,29 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    environment:
+      - DEBUG=True  # Set to False in production
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=book_giveaway
+      - DB_USER=admin
+      - DB_PASSWORD=secretpassword
+    networks:
+      - app-network
+
   db:
     image: postgres
     environment:
       - POSTGRES_DB=book_giveaway
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=secretpassword
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  db-data:
+
+networks:
+  app-network:
