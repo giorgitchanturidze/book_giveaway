@@ -1,38 +1,33 @@
-version: '3'
+version: "3.8"
 
 services:
   web:
-    build: .
-    command: python /app/manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/app
+    build:
+      context: .
+    container_name: web
     ports:
       - "8000:8000"
+    command: ["sh", "./start.sh"]
+    env_file:
+      - .env
     depends_on:
-      - db
-    environment:
-      - DEBUG=True  # Set to False in production
-      - DB_HOST=db
-      - DB_PORT=5432
-      - DB_NAME=book_giveaway
-      - DB_USER=admin
-      - DB_PASSWORD=secretpassword
+      - postgres_db
     networks:
-      - app-network
+      - backend
 
-  db:
-    image: postgres
-    environment:
-      - POSTGRES_DB=book_giveaway
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=secretpassword
+  postgres_db:
+    image: postgres:latest  # Consider pinning to a specific version for consistency
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${SQL_NAME}
+      - POSTGRES_USER=${SQL_USER}
+      - POSTGRES_PASSWORD=${SQL_PASSWORD}
     networks:
-      - app-network
-
-volumes:
-  db-data:
+      - backend
 
 networks:
-  app-network:
+  backend:
+
+volumes:
+  postgres_data:
