@@ -2,7 +2,7 @@
 
 1. **Clone the Project**:
    ```
-   git clone https://github.com/giorgitchanturidze/book-giveaway.git
+   git clone https://github.com/giorgitchanturidze/book_giveaway.git
    ```
 
 2. **Setup Environment Variables**:
