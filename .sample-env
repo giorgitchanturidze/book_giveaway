@@ -1,0 +1,11 @@
+# Django Configurations
+SECRET_KEY=your-secret-key-here  # TODO: Generate a strong secret key
+
+# PostgreSQL Database Configurations
+DB_NAME=tasks_db
+DB_USER=developer
+DB_PASSWORD=change-me  # TODO: Use a strong password
+DB_HOST=postgres_db
+DB_PORT=5432
+
+# (Add other configurations as necessary...)
