@@ -1,16 +1,24 @@
-# Use the official Django image from the DockerHub
-FROM python:3.9
+# Compiler Stage
+FROM python:3.9-slim as compiler
+WORKDIR /app/
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Set up a virtual environment
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
 
-# Set the working directory
-WORKDIR /app
+# Install project dependencies
+COPY ./requirements.txt /app/
+RUN pip install --no-cache-dir -Ur requirements.txt
 
-# Install dependencies
-COPY requirements.txt /app/
-RUN pip install -r requirements.txt
+# Runner Stage
+FROM python:3.9-slim as runner
+WORKDIR /app/
+COPY --from=compiler /opt/venv /opt/venv
 
-# Copy the project files into the Docker image
+# Setting up environment
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Copy project files
 COPY . /app/
+
+CMD ["python", "app.py"]
