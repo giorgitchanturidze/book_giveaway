@@ -1,89 +1,22 @@
-# Book Giveaway Service API
+**Book Give Away - Installation Guide**
 
-A robust and efficient RESTful API service, built using Python and Django, that facilitates a book giveaway platform where registered users can offer and take books for free. Non-registered users have the ability to view the list of available books.
-
-## Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-## Features
-
-- **User Authentication**: Secure registration and authentication of users via email.
-- **Books Management**: Perform CRUD operations on books and filter them based on various parameters like author, genre, etc.
-- **Supporting Resources**: Manage additional resources such as authors, genres, book conditions, and images or posters.
-- **Book Retrieval Information**: Provide information on the location from where the book can be picked up.
-- **Ownership Decision**: If multiple users are interested in a book, the owner has the capability to choose the recipient.
-
-## Tech Stack
-
-- **Back-End**: Python with Django
-- **Database**: PostgreSQL
-- **Containerization**: Docker & Docker Compose
-- **Version Control**: Git
-- **API Documentation**: Swagger (Bonus)
-- **Testing**: Unit Tests (Bonus)
-
-## Prerequisites
-
-- [Docker](https://www.docker.com/get-started)
-- [Docker Compose](https://docs.docker.com/compose/install/)
-
-## Installation
-
-1. Clone this repository:
-   ```sh
-   git clone https://github.com/your-username/book-giveaway-service-api.git
-   cd book-giveaway-service-api
+1. **Clone the Project**:
+   ```
+   git clone https://github.com/giorgitchanturidze/book-giveaway.git
    ```
 
-2. Build and run the Docker containers:
-   ```sh
-   docker-compose build
-   docker-compose up
+2. **Setup Environment Variables**:
+   - Duplicate `.sample-env` as `.env`.
+   - Generate a secret key from [here](https://djecrety.ir/) and update the `.env` file.
+
+3. **Build and Start Services with Docker**:
+   ```
+   docker-compose up -d --build
    ```
 
-3. The API will be available at [http://localhost:8000](http://localhost:8000)
+4. **Initialize Admin Account**:
+   ```
+   docker-compose exec web python manage.py createsuperuser
+   ```
 
-## Usage
-
-Please refer to the [Swagger API documentation](#api-documentation) for detailed information on how to interact with the API endpoints.
-
-## API Documentation
-
-Swagger documentation is available at [http://localhost:8000/swagger](http://localhost:8000/swagger) once the application is running.
-
-## Testing
-
-To run the unit tests, execute the following command:
-```sh
-docker-compose run web python manage.py test
-```
-
-## Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to contribute to this project.
-
-## License
-
-This project is licensed under the Apache-2.0 license - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Contact
-
-Name: **Giorgi**
-
-[Email](mailto:https:chanturidzegiorgi31@gmail.com)
-
-[GitHub Profile](https://github.com/giorgitchanturidze)
-
-[Linkedin Profile](https://www.linkedin.com/in/giorgi-tchanturidze/)
-
-[Project Link](https://github.com/giorgitchanturidze/book_giveaway)
+Congratulations, the installation is complete!
